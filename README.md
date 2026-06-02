@@ -1,78 +1,201 @@
 # Dashboard-analisis-financieros-power-bi
 
-📊 Dashboard Análisis Financiero | Power BI
+# 📊 Dashboard de Análisis Financiero | Power BI
+
+![Preview del Dashboard](images/preview.png)
+
+## 🔗 Dashboard Interactivo
+
+**Power BI Service:**
 https://app.powerbi.com/groups/me/reports/440bf669-5b07-4746-9d67-9a0677db6bcd/24113e6cc83b6d0220e9?redirectedFromSignup=1&experience=power-bi
 
-📌 Descripción del Proyecto
-Este proyecto presenta un Dashboard de Análisis Financiero desarrollado en Power BI para una empresa del rubro tecnología de consumo masivo (consumer tech), con dos líneas de negocio: Dispositivos (hardware) y Digital (software y servicios). El modelo abarca el período 2025–2027 con presencia comercial en 5 continentes.
+---
 
-El informe está diseñado con enfoque ejecutivo para facilitar la toma de decisiones basada en datos, permitiendo analizar rentabilidad, evolución temporal y desempeño por mercado geográfico.
+## 📌 Descripción del Proyecto
 
-🎯 Objetivos del Análisis
-Medir la evolución de ingresos, gastos y utilidad en el período 2025–2027.
-Comparar la rentabilidad entre categorías de producto (Dispositivos vs. Digital).
-Analizar el desempeño financiero por continente y país.
-Identificar tendencias trimestrales en márgenes e ingresos.
-Apoyar decisiones estratégicas de asignación de recursos por segmento.
-📊 Indicadores Clave (KPIs)
-Indicador	Valor
-Ingresos Totales (3 años)	$3.363.434.207
-Gastos Totales (3 años)	$2.692.324.708
-Utilidad Total (3 años)	$671.109.499
-Margen Neto Promedio	19,95%
-📈 Visualizaciones Incluidas
-📌 Tarjetas ejecutivas con KPIs principales (Ingresos, Gastos, Utilidad, Margen)
-📌 Evolución anual de resultados financieros (2025–2027)
-📌 Comparativa de rentabilidad por categoría de producto
-📌 Distribución geográfica de ingresos y margen por continente
-📌 Ranking de países por volumen de ingresos
-📌 Evolución trimestral de ingresos y utilidad (12 trimestres)
-📌 Filtros dinámicos por año, trimestre, categoría y región
-🔎 Principales Hallazgos
-📊 Digital lidera en rentabilidad: la categoría Digital alcanza un margen del 38,8%, casi el triple que Dispositivos (13,9%), posicionándola como el segmento de mayor valor relativo.
+Este proyecto presenta un **Dashboard de Análisis Financiero** desarrollado en **Power BI** para una empresa del sector **Consumer Tech**, con dos líneas de negocio:
 
-🌎 América y Europa destacan en eficiencia: con márgenes del 22,5% y 22,0% respectivamente, superan el promedio global a pesar de no ser los mercados de mayor volumen.
+* 💻 **Dispositivos (Hardware)**
+* ☁️ **Digital (Software y Servicios)**
 
-🌏 Asia es el mercado de mayor volumen con $1.380M en ingresos, pero su margen (17,1%) está por debajo del promedio consolidado.
+El modelo analiza información financiera del período **2025–2027** con presencia comercial en **cinco continentes**, permitiendo evaluar rentabilidad, crecimiento y desempeño geográfico mediante visualizaciones ejecutivas orientadas a la toma de decisiones.
 
-⚠️ Oportunidad de mejora en Dispositivos: la brecha de margen de 25 puntos porcentuales entre categorías sugiere revisar la estructura de costos del segmento hardware.
+---
 
-📅 Estabilidad trimestral: el margen neto se mantiene en torno al 20% durante todos los trimestres, con el pico de ingresos en 2027 T3 ($306M).
+## 🎯 Objetivos del Análisis
 
-🧮 Medidas DAX Implementadas
-Total Ingresos = SUM(Datos[Ingresos])
+* Analizar la evolución de ingresos, gastos y utilidad entre 2025 y 2027.
+* Comparar la rentabilidad entre las categorías Dispositivos y Digital.
+* Evaluar el desempeño financiero por continente y país.
+* Identificar tendencias trimestrales de ingresos y márgenes.
+* Apoyar decisiones estratégicas de asignación de recursos.
 
-Total de Gastos = SUM(Datos[Gastos])
+---
 
-Utilidad = [Total Ingresos] - [Total de Gastos]
+## 📊 KPIs Principales
 
-Margen = DIVIDE([Utilidad], [Total Ingresos], 0)
-🗂 Modelo de Datos
-El modelo está compuesto por 2 tablas de datos y 1 tabla de medidas:
+| Indicador            |          Valor |
+| -------------------- | -------------: |
+| Ingresos Totales     | $3.363.434.207 |
+| Gastos Totales       | $2.692.324.708 |
+| Utilidad Total       |   $671.109.499 |
+| Margen Neto Promedio |         19,95% |
 
-Datos — tabla de hechos con ingresos, gastos, dimensiones temporales (Año, Trimestre) y geográficas (Continente, País)
-Productos — tabla de dimensión con Tipo de Producto y Categoría de Producto
-Medidas — tabla dedicada a medidas DAX (buena práctica de modelado)
-Relación: Datos[Tipo Producto] → Productos[Tipo Producto] (Muchos a uno)
+---
 
-🛠 Herramientas Utilizadas
-Power BI Desktop
-Power BI Service
-🧩 Habilidades Aplicadas
+## 📈 Visualizaciones Incluidas
 
-DAX
-Modelado de datos relacional
-Diseño de visualizaciones ejecutivas
-Storytelling con datos
-🧠 Enfoque Analítico
+### KPIs Ejecutivos
+
+* Ingresos Totales
+* Gastos Totales
+* Utilidad Total
+* Margen Neto
+
+### Análisis Temporal
+
+* Evolución anual de resultados financieros (2025–2027)
+* Evolución trimestral de ingresos y utilidad
+
+### Análisis por Producto
+
+* Comparación de rentabilidad por categoría
+* Participación de ingresos por línea de negocio
+
+### Análisis Geográfico
+
+* Distribución de ingresos por continente
+* Margen por región
+* Ranking de países por ingresos
+
+### Interactividad
+
+* Filtros por:
+
+  * Año
+  * Trimestre
+  * Categoría
+  * Región
+
+---
+
+## 🔎 Principales Hallazgos
+
+### 💰 Digital lidera en rentabilidad
+
+La categoría **Digital** alcanza un margen de **38,8%**, casi tres veces superior al margen de **Dispositivos (13,9%)**, convirtiéndose en el segmento más rentable.
+
+### 🌍 América y Europa destacan en eficiencia
+
+Presentan márgenes de **22,5%** y **22,0%** respectivamente, superando el promedio global.
+
+### 🌏 Asia genera el mayor volumen
+
+Con ingresos superiores a **$1.380M**, Asia es el principal mercado en ventas, aunque su margen (**17,1%**) se encuentra por debajo del promedio consolidado.
+
+### ⚠️ Oportunidad en Hardware
+
+La diferencia de aproximadamente **25 puntos porcentuales** entre ambas categorías sugiere revisar costos y eficiencia operativa del segmento Dispositivos.
+
+### 📅 Estabilidad financiera
+
+El margen neto se mantiene cercano al **20%** durante los 12 trimestres analizados, mostrando consistencia operativa.
+
+---
+
+## 🧮 Medidas DAX Utilizadas
+
+```DAX
+Total Ingresos =
+SUM(Datos[Ingresos])
+
+Total de Gastos =
+SUM(Datos[Gastos])
+
+Utilidad =
+[Total Ingresos] - [Total de Gastos]
+
+Margen =
+DIVIDE([Utilidad], [Total Ingresos], 0)
+```
+
+---
+
+## 🗂 Modelo de Datos
+
+### Tabla de Hechos
+
+**Datos**
+
+* Ingresos
+* Gastos
+* Año
+* Trimestre
+* Continente
+* País
+
+### Tabla Dimensión
+
+**Productos**
+
+* Tipo Producto
+* Categoría Producto
+
+### Tabla de Medidas
+
+**Medidas**
+
+* Medidas DAX centralizadas
+
+### Relación
+
+```text
+Datos[Tipo Producto]
+        │
+        ▼
+Productos[Tipo Producto]
+(Muchos a Uno)
+```
+
+---
+
+## 🛠 Herramientas Utilizadas
+
+* Power BI Desktop
+* Power BI Service
+* DAX
+* Modelado de Datos
+
+---
+
+## 🧩 Habilidades Aplicadas
+
+* DAX
+* Modelado relacional
+* Storytelling con datos
+* Diseño de dashboards ejecutivos
+* Business Intelligence
+* Análisis financiero
+* Visualización de datos
+
+---
+
+## 🧠 Enfoque Analítico
+
 El dashboard fue diseñado bajo principios de:
 
-Jerarquía visual clara
-Diseño moderno corporativo
-Uso estratégico de KPIs financieros
-Análisis descriptivo orientado a negocio
-Segmentación por producto y geografía
-📂 Estructura del Proyecto
+* Jerarquía visual clara
+* Diseño corporativo moderno
+* KPIs orientados al negocio
+* Storytelling visual
+* Segmentación geográfica y por producto
+* Toma de decisiones basada en datos
+
+---
+
+## 📂 Estructura del Proyecto
+
+```text
 proyecto-datdata/
 │
 ├── data/
@@ -85,24 +208,37 @@ proyecto-datdata/
 │   └── preview.png
 │
 └── README.md
-📌 Aplicabilidad Empresarial
-Este tipo de análisis es útil para:
+```
 
-Gerencia General y Dirección Financiera
-Equipos de Estrategia y Planificación
-Analistas de Business Intelligence
-Product Managers de líneas de negocio
-Equipos Comerciales con cobertura internacional
-👤 Autor
-Leo Genao
+---
 
-Proyecto práctico desarrollado como parte de portafolio profesional en análisis de datos y Business Intelligence.
+## 📌 Aplicabilidad Empresarial
 
-Fuente de los datos: Academia Datdata.
+Este análisis puede ser utilizado por:
 
-⭐ Si este proyecto te parece interesante
-No olvides darle una estrella al repositorio y conectar en LinkedIn.
+* Dirección Financiera
+* Gerencia General
+* Equipos de Estrategia
+* Analistas BI
+* Product Managers
+* Equipos Comerciales Internacionales
 
-https://www.linkedin.com/in/leo-genao/
+---
 
-#DataAnalytics #PowerBI #BusinessIntelligence #FinancialAnalysis #DAX #DataPortfolio #ConsumerTech #Datdata
+## 👤 Autor
+
+**Leo Genao**
+
+Proyecto desarrollado como parte de mi portafolio profesional de **Data Analytics y Business Intelligence**.
+
+**Fuente de datos:** Academia Datdata
+
+### Conecta conmigo
+
+LinkedIn: https://www.linkedin.com/in/leo-genao/
+
+---
+
+⭐ Si te gustó este proyecto, considera darle una estrella al repositorio.
+
+#PowerBI #DataAnalytics #BusinessIntelligence #FinancialAnalysis #DAX #DataPortfolio #ConsumerTech #Datdata
